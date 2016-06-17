@@ -10,5 +10,5 @@ This project is based on two previous projects: [midi-shootings](https://github.
 
 ## Basic process
 - Running `$ python fatalities.py` will take the CSV in the `input` directory and produce a MIDI file (`fatalities.mid`), as well as some associated JSON (`data/fatalities.js`).
-- Once the MIDI file is created, open it in GarageBand and export it as an MP3 (`media/fatalities.mp3').
+- Once the MIDI file is created, open it in GarageBand and export it as an MP3 (`media/fatalities.mp3`).
 - `index.html` and `main.js` use the data from `fatalities.js` to synchronize the animations with the MP3 file.

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="utf-8">
+<title>U.S. Mass Shooting Fatalities – The Last 20 Years</title>
+<link href="style/style.css" rel="stylesheet" type="text/css" />
+
+<body>
+
+<script src="data/fatalities.js"></script>
+<script src="scripts/ready.min.js"></script>
+<script src="scripts/snap.svg-min.js"></script>
+<script src="scripts/pym.min.js"></script>
+<script src="scripts/main.js"></script>
+
+<script>
+  var pymChild = new pym.Child();
+</script>
+
+<div id="wrapper">
+  <div class="html-container">
+    <h1>U.S. Mass Shooting Fatalities: The Last 20 Years</h1>
+
+    <p class="intro"><script>document.write(data.length)</script> people have been killed in mass shootings* since <script>document.write(data[0].date.split('/')[2])</script>.</p>
+
+
+    <audio id="track" src="media/fatalities.mp3" preload="auto" ontimeupdate="audioHooks(this)" onloadedmetadata="audioData(this)"><p>Your browser does not support the audio element</p></audio>
+    <span id="tracktime">0 | 0</span>
+    <button onclick="checkAudio();" id="playBtn">Play</button>
+    <button onclick="pauseAudio()" id="pauseBtn" style="display:none;">Pause</button>
+    <button onclick="restart()" id="restartBtn">Restart</button>
+
+    <div id="info-box">
+      Last incident: <span><script>document.write(data[data.length-1].date)</script></span><br />
+      Location: <span><script>document.write(data[data.length-1].location)</script></span><br />
+      Fatalities: <span><script>document.write(data[data.length-1].total)</script></span><br />
+    </div>
+
+  </div>
+
+  <div id="timeline-container">
+
+    <svg version="1.1" id="ms-timeline" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+       viewBox="0 0 600 600" enable-background="new 0 0 450 621.8" xml:space="preserve">
+
+
+    </svg>
+
+
+  </div> <!-- #timeline-container -->
+
+  <div class="html-container">
+
+    <p>This animated data sonification illustrates the loss of life due to mass shootings in the United States since 1997. Each fatality is represented by a single orb in the illustration and a single note in the audio track. The time between clusters of notes is proportional to the time between each mass shooting incident.</p>
+    <p>*The data comes from Mother Jones' <a href="http://www.motherjones.com/politics/2012/12/mass-shootings-mother-jones-full-data" target="_blank">mass shootings investigation</a>, which uses the definition of "mass murder" found in the <a href="https://www.fbi.gov/stats-services/publications/serial-murder/serial-murder-1#two" target="_blank">FBI's crime classification report</a>: an incident with four or more fatalities (excluding the perpetrator) in a single event, typically in a single location.</p>
+    
+
+    <div class="divider"></div>
+    <p>
+      <strong>Credits:</strong><br />
+      Design and development by Julia Smith/Knight-Mozilla<br />
+    </p>    
+    <p>
+      <strong>Source:</strong><br />
+      <a href="http://www.motherjones.com/politics/2012/12/mass-shootings-mother-jones-full-data" target="_blank">Mother Jones</a>
+    </p>
+    <p>
+      <strong>Resources:</strong><br />
+      Data sonification produced with MIDITime (Michael Corey/Reveal)<br />
+      SVG animation produced with Snap.svg (Dmitry Baranovskiy/Adobe)
+    </p>
+  </div>
+
+</div>
+
+
+
+</body>
+</html>

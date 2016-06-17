@@ -1,0 +1,112 @@
+html, body {
+  margin:0 auto;
+}
+
+body {
+  background-color: #fff;
+  color:#666666;
+  font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size:.8em;
+}
+
+button {
+  border:none;
+  background-color:#444444;
+  color:white;
+  -webkit-transition: background-color 100ms linear;
+  -moz-transition: background-color 100ms linear;
+  -o-transition: background-color 100ms linear;
+  transition: background-color 100ms linear;
+  min-width:70px;
+}
+
+button:hover {
+  cursor:pointer;
+  background-color:#666666;
+}
+
+button:focus {
+  outline:none;
+  background-color:#666666;
+}
+
+a, a:visited {
+  color:#666666;
+}
+
+a:hover {
+  color:#444444;
+}
+
+h1 {
+  color:#444444;
+  font-weight:bold;
+  margin-top:0;
+}
+
+#wrapper {
+  max-width:920px;
+  margin:0 auto;
+  padding:20px;
+}
+
+#info-box {
+  margin:1.5em 0 .5em 0;
+}
+
+#info-box span {
+  font-weight:bold;
+}
+
+#tracktime {
+  margin-right:1em;
+}
+
+.html-container {
+  margin:0;
+  padding:.5%;
+}
+
+#timeline-container {
+  margin: 1em 0;
+}
+
+.bar, .clone {
+  -webkit-transition: fill 100ms linear;
+  -moz-transition: fill 100ms linear;
+  -o-transition: fill 100ms linear;
+  transition: fill 100ms linear;
+}
+
+.bar:hover {
+  fill: #444444;
+}
+ .clone:hover {
+  fill: #666666;
+}
+
+.intro {
+  margin-bottom:2em;
+}
+
+#tooltip {
+  text-align:center;
+  font-weight:bold;
+  margin-bottom:1em;
+}
+
+#tooltip span {
+  padding-left: 1em;
+}
+
+#tooltip .date,
+#tooltip .location {
+  border-right:1px solid #aaaaaa;
+  padding-right:1em;
+}
+
+.divider {
+  border-top:1px solid #aaaaaa;
+  width:30%;
+  margin:2em 0 1em 0;
+}
